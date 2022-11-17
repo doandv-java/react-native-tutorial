@@ -9,8 +9,8 @@ const LoginScreen = ({navigation}) => {
 
 
     return (
-        <View styles={styles.container}>
-            <View styles={styles.wrapper}>
+        <View style={styles.container}>
+            <View style={styles.wrapper}>
                 <Text>{val}</Text>
                 <TextInput style={styles.input}
                            placeholder="Enter email"
