@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use  App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +19,17 @@ use App\Http\Controllers\ArticleController;
 //    return $request->user();
 //});
 
-Route::get('articles', [ArticleController::class,'index']);
+Route::get('articles', [ArticleController::class, 'index']);
 
-Route::get('articles/{article}',  [ArticleController::class,'show']);
+Route::get('articles/{article}', [ArticleController::class, 'show']);
 
-Route::post('articles',  [ArticleController::class,'store']);
+Route::post('articles', [ArticleController::class, 'store']);
 
-Route::put("articles/{article}",  [ArticleController::class,'update']);
+Route::put("articles/{article}", [ArticleController::class, 'update']);
 
-Route::delete('articles/{article}',  [ArticleController::class,'delete']);
+Route::delete('articles/{article}', [ArticleController::class, 'delete']);
+
+Route::post('login', [RegisterController::class, 'login']);
+Route::post('logout', [RegisterController::class, 'logout']);
+Route::post('register', [RegisterController::class, 'register']);
+
