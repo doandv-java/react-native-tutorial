@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
         $faker = Factory::create();
         $password = Hash::make('toptal');
 
-        User::created([
+        User::create([
             'name' => "Administrator",
             'email' => "admin@test.com",
             'password' => $password
